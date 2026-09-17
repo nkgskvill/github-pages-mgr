@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HTMLとCSSで作成したGitHub Pagesのテストサイトです。">
-    <title>GitHub Pages テストサイト</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <main class="card">
-      <p class="label">GitHub Pages テストサイト</p>
-      <h1>CodexからGitHub Pagesの自動更新テスト！</h1>
-      <p class="description">HTMLとCSSでつくる、シンプルなテストページ。</p>
-    </main>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="シニア向け地域情報サイトの試作版です。">
+<title>○○地域 シニア情報ナビ</title>
+<link rel="stylesheet" href="./style.css">
+<script src="./script.js" defer></script>
+</head>
+<body id="home">
+<a class="skip-link" href="#main">本文へ移動する</a>
+<div class="top-bar"><div class="container top-inner"><p>試作版｜掲載情報・団体名・電話番号は架空です</p>
+<div class="text-controls" role="group" aria-label="文字の大きさ" hidden data-js><button id="text-large" type="button" aria-pressed="false">文字を大きく</button><button id="text-standard" type="button" aria-pressed="true">標準に戻す</button></div></div></div>
+<header class="container site-header"><p class="eyebrow">いつもの暮らしに、身近な情報を。</p><h1>○○地域 <span>シニア情報ナビ</span></h1><p>地域の暮らし・健康・福祉・イベント情報をわかりやすくお届けします</p><nav aria-label="主なメニュー"><a href="#home">ホーム</a><a href="#news">お知らせ</a><a href="#categories">情報を探す</a><a href="#consultation">相談窓口</a></nav></header>
+<main id="main" class="container" tabindex="-1">
+<section class="search-panel" aria-labelledby="search-heading" hidden data-js><h2 id="search-heading">何をお探しですか？</h2><p id="search-help">気になる言葉で、新着情報の見出しを探せます。</p><form id="search-form" role="search"><label for="search-input">探したい言葉</label><div class="search-row"><input id="search-input" type="search" placeholder="例：健康、スマートフォン、介護" aria-describedby="search-help" aria-controls="news-list"><button class="primary" type="submit">検索する</button></div></form></section>
+<noscript><p class="notice">検索と文字サイズの変更にはJavaScriptが必要です。お知らせはすべて下に掲載しています。</p></noscript>
+<section class="important" aria-labelledby="important-heading"><h2 id="important-heading">！ 大切なお知らせ</h2><details><summary>台風接近に伴う施設休館のお知らせ</summary><p>これは表示確認用の架空のお知らせです。台風の接近に伴い、一部の地域施設を臨時休館する場合がある、という想定です。実際の休館情報ではありません。</p><p>情報提供：○○市</p></details></section>
+<section id="categories" aria-labelledby="categories-heading"><h2 id="categories-heading">目的から探す</h2><p>知りたいことを選ぶと、関連するお知らせを表示します。</p><div class="category-grid" hidden data-js>
+<button type="button" class="category" data-category="健康・医療" aria-pressed="false" aria-controls="news-list"><span class="icon" aria-hidden="true"></span>健康・医療</button>
+<button type="button" class="category" data-category="相談・支援" aria-pressed="false" aria-controls="news-list"><span class="icon" aria-hidden="true"></span>相談・支援</button>
+<button type="button" class="category" data-category="イベント" aria-pressed="false" aria-controls="news-list"><span class="icon" aria-hidden="true"></span>イベント</button>
+<button type="button" class="category" data-category="おでかけ・交通" aria-pressed="false" aria-controls="news-list"><span class="icon" aria-hidden="true"></span>おでかけ・交通</button>
+<button type="button" class="category" data-category="介護・福祉" aria-pressed="false" aria-controls="news-list"><span class="icon" aria-hidden="true"></span>介護・福祉</button>
+<button type="button" class="category" data-category="スマホ・デジタル支援" aria-pressed="false" aria-controls="news-list"><span class="icon" aria-hidden="true"></span>スマホ・デジタル支援</button>
+</div><noscript><p>各お知らせのカテゴリーをご確認ください。</p></noscript></section>
+<section id="news" aria-labelledby="news-heading"><div class="section-heading"><h2 id="news-heading" tabindex="-1">新着情報</h2><span>地域からのお知らせ</span></div><p>見出しを押すと、詳しい内容が開きます。すべて試作版の情報です。</p><div class="filter-tools" hidden data-js><p id="result-status" role="status" aria-live="polite" aria-atomic="true"></p><button type="button" id="reset-filter">絞り込みを解除</button></div>
+<ul id="news-list" class="news-list">
+<li data-category="健康・医療"><article><div class="news-meta"><time datetime="2026-09-17">2026年9月17日</time><span class="tag">健康・医療</span></div><details><summary>健康づくり教室を開催します</summary><p>椅子に座ってできる体操を体験する教室の掲載例です。試作版のため、実際の開催・申し込み・相談には対応していません。</p></details><p class="source">情報提供：○○市</p></article></li>
+<li data-category="スマホ・デジタル支援"><article><div class="news-meta"><time datetime="2026-09-16">2026年9月16日</time><span class="tag">スマホ・デジタル支援</span></div><details><summary>シニア向けスマートフォン教室のお知らせ</summary><p>電話や写真の使い方をゆっくり練習する教室の掲載例です。試作版のため、実際の開催・申し込み・相談には対応していません。</p></details><p class="source">情報提供：○○市社会福祉協議会</p></article></li>
+<li data-category="介護・福祉"><article><div class="news-meta"><time datetime="2026-09-14">2026年9月14日</time><span class="tag">介護・福祉</span></div><details><summary>介護についての無料相談会を開催します</summary><p>介護の心配ごとを相談できる会の掲載例です。試作版のため、実際の開催・申し込み・相談には対応していません。</p></details><p class="source">情報提供：○○地域包括支援センター</p></article></li>
+<li data-category="イベント"><article><div class="news-meta"><time datetime="2026-09-12">2026年9月12日</time><span class="tag">イベント</span></div><details><summary>秋の地域交流会に参加しませんか</summary><p>お話や趣味を楽しむ地域交流会の掲載例です。試作版のため、実際の開催・申し込み・相談には対応していません。</p></details><p class="source">情報提供：○○市社会福祉協議会</p></article></li>
+<li data-category="おでかけ・交通"><article><div class="news-meta"><time datetime="2026-09-10">2026年9月10日</time><span class="tag">おでかけ・交通</span></div><details><summary>地域バスの利用案内を配布します</summary><p>バスの乗り方や停留所を紹介する案内の掲載例です。試作版のため、実際の開催・申し込み・相談には対応していません。</p></details><p class="source">情報提供：○○市</p></article></li>
+<li data-category="相談・支援"><article><div class="news-meta"><time datetime="2026-09-08">2026年9月8日</time><span class="tag">相談・支援</span></div><details><summary>暮らしの困りごと相談のご案内</summary><p>日々の暮らしの困りごとを相談できる窓口の掲載例です。試作版のため、実際の開催・申し込み・相談には対応していません。</p></details><p class="source">情報提供：○○地域包括支援センター</p></article></li>
+<li data-category="イベント"><article><div class="news-meta"><time datetime="2026-09-05">2026年9月5日</time><span class="tag">イベント</span></div><details><summary>地域の作品展示会のお知らせ</summary><p>絵画や手芸などの作品を紹介する展示会の掲載例です。試作版のため、実際の開催・申し込み・相談には対応していません。</p></details><p class="source">情報提供：その他関係機関</p></article></li>
+<li data-category="健康・医療"><article><div class="news-meta"><time datetime="2026-09-03">2026年9月3日</time><span class="tag">健康・医療</span></div><details><summary>健康について学ぶ講座のご案内</summary><p>地域で健康について学べる講座の掲載例です。試作版のため、実際の開催・申し込み・相談には対応していません。</p></details><p class="source">情報提供：○○市</p></article></li>
+</ul><p id="empty-message" class="notice" hidden>該当するお知らせがありません。別の言葉で検索するか、絞り込みを解除してください。</p><button id="load-more" class="more-button" type="button" aria-controls="news-list" hidden>もっと見る</button></section>
+<section id="consultation" class="consultation" aria-labelledby="consultation-heading"><h2 id="consultation-heading">困ったときの相談窓口</h2><p>ひとりで悩まず、身近な窓口へ。</p><p class="dummy-note">以下は架空の窓口・電話番号です。実際の相談には利用できません。</p><div class="contact-grid">
+<article class="contact-card"><h3>○○地域包括支援センター</h3><p>介護や日々の暮らしについて</p><a class="phone" href="tel:0000000000" aria-label="○○地域包括支援センター 電話：000-000-0000（架空の番号）">電話：000-000-0000</a></article>
+<article class="contact-card"><h3>○○市社会福祉協議会</h3><p>地域の支え合いや福祉について</p><a class="phone" href="tel:0000000000" aria-label="○○市社会福祉協議会 電話：000-000-0000（架空の番号）">電話：000-000-0000</a></article>
+</div></section>
+<section aria-labelledby="providers-heading"><h2 id="providers-heading">情報提供元</h2><ul class="providers"><li>○○市</li><li>○○市社会福祉協議会</li><li>○○地域包括支援センター</li><li>その他関係機関</li></ul></section>
+<section class="site-info" aria-label="サイトのご案内">
+<details id="about"><summary>このサイトについて</summary><p>高齢者の方が地域の情報を簡単に探せることを目指した試作サイトです。掲載されている団体・お知らせ・電話番号はすべて架空です。</p></details>
+<details id="inquiry"><summary>お問い合わせ</summary><p>このサイトは試作版のため、お問い合わせは受け付けていません。実際の問い合わせ窓口は未設置です。</p></details>
+<details id="privacy"><summary>プライバシーポリシー</summary><p>文字サイズの設定をお使いのブラウザ内に保存します。検索はこのページ内で行い、入力した言葉を外部に送信しません。この試作版には個人情報の入力フォームやアクセス解析機能はありません。</p></details>
+</section></main>
+<footer><div class="container"><nav aria-label="サイトについて"><a href="#about">このサイトについて</a><a href="#inquiry">お問い合わせ</a><a href="#privacy">プライバシーポリシー</a></nav><p>○○地域 シニア情報ナビ ／ 試作版</p></div></footer>
+</body>
 </html>
