@@ -45,7 +45,8 @@ summary:hover { color: #143c2e; background: #edf3ed; }
 details[open] > summary { margin-bottom: 0.6rem; }
 .category-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .category { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.3rem; min-height: 145px; border: 2px solid #8ca898; }
-.category[aria-pressed="true"]::after { content: "✓ 選択中"; font-size: 0.9rem; }
+.category { padding: 0.6rem 1rem; border-radius: 0.5rem; background: white; text-align: center; font-weight: 700; line-height: 1.5; }
+.category:hover { background: #e4efe5; }
 .icon { width: 2rem; height: 2rem; display: grid; place-items: center; }
 .icon svg { width: 100%; height: 100%; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .section-heading, .filter-tools { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1rem; }
@@ -79,4 +80,30 @@ footer p { margin: 1rem 0 0; }
 }
 @media (forced-colors: active) {
   button[aria-pressed="true"] { border: 4px double ButtonText; }
+}
+
+/* 共通デザインを引き継ぐ一覧・詳細ページ */
+.site-title { font-size: clamp(1.8rem, 5vw, 2.6rem); font-weight: 700; line-height: 1.5; }
+.site-title span { display: inline-block; }
+.button-link { display: inline-flex; justify-content: center; align-items: center; min-height: 52px; padding: 0.65rem 1rem; border: 2px solid var(--green); border-radius: 0.5rem; background: white; text-align: center; font-weight: 700; }
+.button-link:hover { background: #e4efe5; }
+.more-button { display: flex; }
+.breadcrumbs { margin-block: 1.5rem; }
+.breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; list-style: none; padding: 0; margin: 0; }
+.breadcrumbs li { display: flex; align-items: center; gap: 0.8rem; min-width: 0; }
+.breadcrumbs li + li::before { content: "›"; flex-shrink: 0; }
+.breadcrumbs a, .breadcrumbs span { padding-block: 0.5rem; }
+.breadcrumbs [aria-current="page"] { font-weight: 700; }
+.page-intro { margin-block: 2rem; }
+.news-title { font-size: 1.15rem; margin: 0.4rem 0; }
+.news-title a, .important-link { display: block; min-height: 52px; padding-block: 0.65rem; }
+.important-link { font-size: 1.1rem; font-weight: 700; }
+.return-links { margin-block: 2rem; gap: 1rem; }
+.article-detail { max-width: 46rem; margin: 2rem auto; }
+.article-detail > header, .article-detail > section { margin-bottom: 2rem; }
+.article-detail .tag { display: inline-flex; align-items: center; min-height: 52px; }
+.article-detail .phone { max-width: 24rem; }
+@media (max-width: 720px) {
+  .return-links { flex-direction: column; }
+  .return-links a { width: 100%; }
 }
